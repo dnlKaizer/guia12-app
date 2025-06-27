@@ -1,0 +1,41 @@
+/* You can add global styles to this file, and also import other style files */
+@use '@angular/material' as mat;
+
+// Cor primária: Azul escuro (Indigo 900)
+$custom-primary: mat.define-palette(mat.$indigo-palette, 900);
+
+// Cor de acento: Cinza azulado (Blue Grey 300)
+$custom-accent: mat.define-palette(mat.$blue-grey-palette, 300);
+
+// Cor de alerta: Vermelho padrão
+$custom-warn: mat.define-palette(mat.$red-palette);
+
+// Tema claro personalizado, mas com tons mais sóbrios
+$custom-theme: mat.define-light-theme((
+  color: (
+    primary: $custom-primary,
+    accent: $custom-accent,
+    warn: $custom-warn,
+    background: (
+      background: #bad7f1, // fundo cinza claro, menos branco
+      card: #e0e0e0,
+      dialog: #e0e0e0,
+      hover: #d6d6d6,
+      status-bar: #1a237e,
+      app-bar: #1a237e,
+    ),
+  ),
+  typography: mat.define-typography-config(),
+));
+
+// Aplica o tema a todos os componentes do Material
+@include mat.all-component-themes($custom-theme);
+
+// CSS
+
+html, body { height: 100%; }
+body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
+
+.text-white {
+    color: white;
+}

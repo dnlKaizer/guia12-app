@@ -1,0 +1,50 @@
+<mat-card class="container pb-3">
+
+  <mat-card-header class="justify-content-center align-items-center pb-3">
+    <mat-card-title class="">Cadastrar Funcionário</mat-card-title>
+  </mat-card-header>
+
+  <form [formGroup]="formulario" (ngSubmit)="onSubmit()">
+
+    <div class="row">
+
+      <mat-form-field class="col" appearance="fill">
+        <mat-label>Nome: </mat-label>
+        <input class="" matInput placeholder="Placeholder">
+      </mat-form-field>
+
+      <mat-form-field class="col" appearance="fill">
+        <mat-label>CPF: </mat-label>
+        <input class="" matInput placeholder="Placeholder">
+      </mat-form-field>
+
+      <mat-form-field class="col" appearance="fill">
+        <mat-label>Rua: </mat-label>
+        <input class="" matInput placeholder="Placeholder">
+      </mat-form-field>
+
+    </div>
+
+    <div class="row">
+
+      <mat-form-field class="col" appearance="fill">
+        <mat-label>Número: </mat-label>
+        <input class="" matInput placeholder="Placeholder">
+      </mat-form-field>
+  
+      <mat-form-field class="col" appearance="fill">
+        <mat-label>Cidade: </mat-label>
+        <input class="" matInput placeholder="Placeholder">
+      </mat-form-field>
+  
+      <mat-form-field class="col" appearance="fill">
+        <mat-label>Estado: </mat-label>
+        <input class="" matInput placeholder="Placeholder">
+      </mat-form-field>
+
+    </div>
+
+
+    <button mat-raised-button color="primary" type="submit" [disabled]="formulario.invalid">Cadastrar</button>
+  </form>
+</mat-card>
